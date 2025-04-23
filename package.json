@@ -1,0 +1,9 @@
+{
+  "name": "time-ago-lite",
+  "version": "1.0.0",
+  "description": "A minimal utility to show relative time like '3 hours ago'.",
+  "main": "dist/index.js",
+  "keywords": ["time", "ago", "date", "relative", "lightweight"],
+  "author": "Your Name",
+  "license": "MIT"
+}
