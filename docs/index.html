@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time-ago-lite Demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        max-width: 600px;
+        margin: auto;
+      }
+      input,
+      button {
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      .output {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🕒 time-ago-lite Demo</h1>
+    <p>
+      Enter a date string, timestamp, or ISO format. Example:
+      <code>2023-01-01</code> or <code>1713883200000</code>
+    </p>
+    <input id="input" placeholder="Enter date or timestamp..." />
+    <div class="output" id="output"></div>
+
+    <script src="../dist/index.js"></script>
+    <script>
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+
+      input.addEventListener("input", () => {
+        try {
+          const result = window.timeAgo(input.value);
+          output.textContent = result;
+        } catch (e) {
+          output.textContent = "Invalid input";
+        }
+      });
+    </script>
+  </body>
+</html>
